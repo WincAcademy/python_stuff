@@ -3,11 +3,10 @@ from datetime import date
 
 def date_is_more_than_18_years_ago(given_date):
     vandaag = date.today()
-    year_diff = vandaag.year - given_date.year
 
-    if year_diff > 18:
+    if vandaag.year - given_date.year > 18:
         return True
-    elif year_diff < 18:
+    elif vandaag.year - given_date.year < 18:
         return False
 
     if vandaag.month > given_date.month:
